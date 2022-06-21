@@ -1,9 +1,9 @@
 let $ = window.$;
 const tableauExt = window.tableau.extensions;
 
-let init = () => {
+async function init(){
     let dashboard = tableauExt.dashboardContent.dashboard;
-    let worksheets = tableauExt.dashboardContent.dashboard.worksheets;
+    //Loop through the Objects on the Dashboard and render the HTML Objects
     dashboard.objects.forEach(obj => {
         render(obj);
     })
@@ -11,13 +11,15 @@ let init = () => {
 
 async function render(obj) {
     let objNameAndClasses = obj.name.split("|");
-    let divType = '<div>';
+    //Parse the Name and Classes from the Object Name
     let objId = objNameAndClasses[0];
     let objClasses;
+    //Check if there are classes on the object
     if (objNameAndClasses.length > 1 ) {
         objClasses = objNameAndClasses[1];
     }
-    console.log(objId)
+    //Create the initial object with CSS Props
+    //Here we set the CSS props to match the location of the objects on the Dashboard
     let props = {
         id: `${objId}`,
         css: {
@@ -29,8 +31,8 @@ async function render(obj) {
         }
     }
     let $div;
-    console.log(parseInt(obj.size.height)/16.0)
-    if (objId.includes('icon')) {
+    //Check if the object is an Icon
+    if (objId.toUpperCase().includes('ICON')) {
         props.css['font-size'] = `${parseInt(obj.size.height)/16.0}rem`;
         props.css['text-align'] = "center";
         $div = $('<svg>', props);
@@ -41,6 +43,7 @@ async function render(obj) {
     } else {
         $div = $('<div>', props);
     }
+    //Add the class to the HTML Body
     $div.addClass(objClasses);
     $('body').append($div);
 }
