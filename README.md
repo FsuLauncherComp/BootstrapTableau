@@ -6,7 +6,7 @@ Bootstrap 5 style extension for Tableau. Create rich backgrounds for Tableau obj
 
 Bootstrap Tableau works in a similar manner to background images. The difference is you use Tableau objects as your anchor for backgrounds.
 
-Download the .trex file [here](https://github.com/FsuLauncherComp/BootstrapTableau/blob/main/tabcss.trex).
+Download the .trex file [here](https://github.com/FsuLauncherComp/BootstrapTableau/releases/tag/trex).
 
 1. Float the Extension onto the Dashboard and set it to the size of the dashboard.
 2. Design your Dashboard by placing your objects (worksheets, text, etc) on top of the Extension
