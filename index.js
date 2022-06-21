@@ -5,7 +5,6 @@ let init = () => {
     let dashboard = tableauExt.dashboardContent.dashboard;
     let worksheets = tableauExt.dashboardContent.dashboard.worksheets;
     dashboard.objects.forEach(obj => {
-        console.log(obj.name, obj.id, obj.position.x, obj.position.y, obj.size.height, obj.size.width);
         render(obj);
     })
 }
