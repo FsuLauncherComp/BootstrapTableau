@@ -1,0 +1,43 @@
+.bi::before,
+[class^="bi-"]::before,
+[class*=" bi-"]::before {
+  display: inline-block;
+  font-display: block;
+  font-family: bootstrap-icons !important;
+  font-style: normal;
+  font-weight: normal !important;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  vertical-align: -.05em !important; 
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.rounded-4 {
+  border-radius: 0.4rem !important;
+}
+
+.rounded-5 {
+  border-radius: 0.5rem !important;
+}
+
+.rounded-10 {
+  border-radius: 1rem !important;
+}
+
+.rounded-20 {
+  border-radius: 2rem !important;
+}
+
+.rounded-30 {
+  border-radius: 3rem !important;
+}
+
+.rounded-40 {
+  border-radius: 4rem !important;
+}
+
+.rounded-50 {
+  border-radius: 5rem !important;
+}
