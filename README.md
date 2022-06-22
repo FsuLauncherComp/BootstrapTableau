@@ -58,32 +58,17 @@ Github icon|bi bi-github
 
 ### Extended Bootstrap Classes
 
-**Border Radius**
+**Border Radius:** Additional rounded border classes
 
-rounded-4
-rounded-5
-rounded-10
-rounded-20
-rounded-30
-rounded-40
-rounded-50
+rounded-4, rounded-5, rounded-10, rounded-20, rounded-30, rounded-40, rounded-50
 
-**Z Index**
+**Z Index:** Control the Z order of objects
 
-z-1
-z-2
-z-3
-z-4
-z-5
-z-6
-z-7
-z-8
-z-9
+z-1, z-2, z-3, z-4, z-5, z-6, z-7, z-8, z-9
 
-**Neuomorphic**
+**Neuomorphic:** Basic Neomorphic classes
 
-bg-morph
-bg-morph-inset
+bg-morph, bg-morph-inset
 
 ## Useful Links
 
