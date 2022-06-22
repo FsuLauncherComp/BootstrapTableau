@@ -41,3 +41,56 @@
 .rounded-50 {
   border-radius: 5rem !important;
 }
+
+.border-dashed {
+  border-style: dashed !important;
+}
+
+.border-dotted {
+  border-style: dotted !important;
+}
+.bg-morph {
+  box-shadow: 12px 12px 24px 0 rgba(0, 0, 0, 0.2),
+    -12px -12px 24px 0 rgba(255, 255, 255, 0.5);
+}
+
+.bg-morph-inset {
+  box-shadow: inset 6px 6px 10px 0 rgba(0, 0, 0, 0.2),
+    inset -6px -6px 10px 0 rgba(255, 255, 255, 0.5);
+}
+
+.z-1 {
+  z-index: 100 !important;
+}
+
+.z-2 {
+  z-index: 200 !important;
+}
+
+.z-3 {
+  z-index: 300 !important;
+}
+
+.z-4 {
+  z-index: 400 !important;
+}
+
+.z-5 {
+  z-index: 500 !important;
+}
+
+.z-6 {
+  z-index: 600 !important;
+}
+
+.z-7 {
+  z-index: 700 !important;
+}
+
+.z-8 {
+  z-index: 800 !important;
+}
+
+.z-9 {
+  z-index: 900 !important;
+}

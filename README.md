@@ -58,6 +58,8 @@ Github icon|bi bi-github
 
 ### Extended Bootstrap Classes
 
+**Border Radius**
+
 rounded-4
 rounded-5
 rounded-10
@@ -65,6 +67,23 @@ rounded-20
 rounded-30
 rounded-40
 rounded-50
+
+**Z Index**
+
+z-1
+z-2
+z-3
+z-4
+z-5
+z-6
+z-7
+z-8
+z-9
+
+**Neuomorphic**
+
+bg-morph
+bg-morph-inset
 
 ## Useful Links
 
