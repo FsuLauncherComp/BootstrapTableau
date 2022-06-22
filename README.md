@@ -33,42 +33,39 @@ There is no configuration popup, no JSON configs, just pure Bootstrap CSS
 
 *Container with rounded borders, drop shadow, and gradient background*
 
-BarChart|border rounded-10 shadow bg-light bg-gradient
+>BarChart|border rounded-10 shadow bg-light bg-gradient
 
 ![Example 1!](/assets/Example1.png "Example 1")
 
 *Container with more rounded borders, large drop shadow, and thicker border*
 
-BarChart|border border-2 rounded-20 shadow-lg
+>BarChart|border border-2 rounded-20 shadow-lg
 
 ![Example 2!](/assets/Example2.png "Example 2")
 
-### Icons
+## Icons
 
-Use any Bootstrap Icon as a background imag
-
-[Bootstrap Icons](https://icons.getbootstrap.com/).
+Use any Bootstrap Icon as a background image
 
 *Add icon before the pipe deliminator | in the Object Name along with the Icon Classes*
 
-Github icon|bi bi-github
+>Github icon|bi bi-github
 
 ![Example 3!](/assets/Example3.png "Example 3")
-
 
 ## Extended Bootstrap Classes
 
 **Border Radius:** Additional rounded border classes
 
-rounded-4, rounded-5, rounded-10, rounded-20, rounded-30, rounded-40, rounded-50
+> rounded-4, rounded-5, rounded-10, rounded-20, rounded-30, rounded-40, rounded-50
 
 **Z Index:** Control the Z order of objects
 
-z-1, z-2, z-3, z-4, z-5, z-6, z-7, z-8, z-9
+> z-1, z-2, z-3, z-4, z-5, z-6, z-7, z-8, z-9
 
 **Neuomorphic:** Basic Neomorphic classes
 
-bg-morph, bg-morph-inset
+> bg-morph, bg-morph-inset
 
 ## Useful Links
 
