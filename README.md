@@ -56,7 +56,7 @@ Github icon|bi bi-github
 ![Example 3!](/assets/Example3.png "Example 3")
 
 
-### Extended Bootstrap Classes
+## Extended Bootstrap Classes
 
 **Border Radius:** Additional rounded border classes
 
