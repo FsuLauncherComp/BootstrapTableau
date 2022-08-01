@@ -8,12 +8,16 @@ Bootstrap 5 style extension for Tableau. Create rich backgrounds for Tableau obj
 
 Bootstrap Tableau works in a similar manner to background images. The difference is you use Tableau objects as your anchor for backgrounds.
 
+Support for clickthrough and automatic resizing/positioning
+
 Download the .trex file [here](https://github.com/FsuLauncherComp/BootstrapTableau/releases/tag/trex).
 
 1. Float the Extension onto the Dashboard and set it to the size of the dashboard.
-2. Design your Dashboard by placing your objects (worksheets, text, etc) on top of the Extension
-3. Change the name of the Object in the item hierarchy
-4. Pattern: Object Name|Bootstrap 5 Classes
+2. Set Extension outer padding to zero
+3. Design your Dashboard by placing your objects (worksheets, text, etc) on top of the Extension
+4. Add inner padding or blank objects for spacing
+5. Change the name of the Object in the item hierarchy
+6. Pattern: Object Name|Bootstrap 5 Classes
 
 ## Just use some words
 
@@ -61,11 +65,15 @@ Use any Bootstrap Icon as a background image
 
 **Z Index:** Control the Z order of objects
 
-> z-1, z-2, z-3, z-4, z-5, z-6, z-7, z-8, z-9
+> z-1, z-2, ..., z-15
 
 **Neuomorphic:** Basic Neomorphic classes
 
 > bg-morph, bg-morph-inset
+
+**Built in Starschema class:**
+
+> star-cntr
 
 ## Useful Links
 
@@ -75,6 +83,7 @@ Use any Bootstrap Icon as a background image
 
 ## Help
 
-The extension is in Alpha and does not have automatic reloading. To see your changes take effect you have to reload the extension by clicking on the dropdown carrot and pressing reload.
+The Tableau Extension API does not expose the Outer padding of objects. For objects inside of containers you will need to create parent containers to create spacing, or add blank/text objects to seperate objects.
 
-![Example 6!](/assets/Example6.png "Example 6")
+Tableau objects are returned in the order they are craeted, not the order they are in the hierarchy. Sometimes this causes the extension to load the backgrounds in the wrong order. To adjust for this, use the zindex classes (1-15) to ensure your containers render in the right order.
+
