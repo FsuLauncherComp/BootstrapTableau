@@ -39,19 +39,7 @@ const tableauExt = window.tableau.extensions;
                 'height': `${parseInt(obj.size.height)}px`
             }
         }
-        let $div;
-        //Check if the object is an Icon
-        if (objId.toUpperCase().includes('ICON')) {
-            props.css['font-size'] = `${parseInt(obj.size.height) / 16.0}rem`;
-            props.css['text-align'] = "center";
-            $div = $('<svg>', props);
-            $div.attr("height", parseInt(obj.size.height));
-            $div.attr("width", parseInt(obj.size.width));
-            $div.attr("fill", "currentColor");
-            $div.attr("xmlns", "http://www.w3.org/2000/svg");
-        } else {
-            $div = $('<div>', props);
-        }
+        let $div = $('<div>', props);
         //Add the class to the HTML Body
         $div.addClass(objClasses);
         $('body').append($div);
