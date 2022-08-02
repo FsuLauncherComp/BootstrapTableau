@@ -73,8 +73,6 @@ There is no configuration popup, no JSON configs, just pure Bootstrap CSS
 
 [Bootstrap 5 Documentation](https://getbootstrap.com/) Here you can find all the Bootstrap 5 Classes to style your containers
 
-[Bootstrap Icons](https://icons.getbootstrap.com/). Get all the Bootstrap Icons that can be loaded onto your dashboard, as well as, how to customize them with Text style classes
-
 ## Help
 
 The Tableau Extension API does not expose the Outer padding of objects. For objects inside of containers you will need to create parent containers to create spacing, or add blank/text objects to seperate objects.
