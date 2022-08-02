@@ -47,16 +47,6 @@ There is no configuration popup, no JSON configs, just pure Bootstrap CSS
 
 ![Example 2!](/assets/Example2.png "Example 2")
 
-## Icons
-
-Use any Bootstrap Icon as a background image
-
-*Add icon before the pipe deliminator | in the Object Name along with the Icon Classes*
-
->Github icon|bi bi-github
-
-![Example 3!](/assets/Example3.png "Example 3")
-
 ## Extended Bootstrap Classes
 
 **Border Radius:** Additional rounded border classes
@@ -74,6 +64,10 @@ Use any Bootstrap Icon as a background image
 **Built in Starschema class:**
 
 > star-cntr
+
+**Tailwind Background Colors:** Tailwind.css BG color classes
+
+> [Tailwind Color Classes](https://tailwindcss.com/docs/background-color) 
 
 ## Useful Links
 
