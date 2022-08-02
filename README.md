@@ -29,7 +29,7 @@ There is no configuration popup, no JSON configs, just pure Bootstrap CSS
 ![Example 4!](/assets/Example4.png "Example 4")
 
 *After*
-![Example 5!](/assets/Example5.png "Example 5")
+![Example 5!](/assets/Example0.png "Example 5")
 
 ## Examples
 
