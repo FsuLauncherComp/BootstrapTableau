@@ -47,6 +47,34 @@ There is no configuration popup, no JSON configs, just pure Bootstrap CSS
 
 ![Example 2!](/assets/Example2.png "Example 2")
 
+## Bootstrap Specific Docs
+
+### Borders
+> [Boostrap Border Classes](https://getbootstrap.com/docs/5.0/utilities/borders/) 
+
+### Corner Radius
+> [Boostrap Radius Classes](https://getbootstrap.com/docs/5.0/utilities/borders/#border-radius) 
+
+> Also supports 
+> rounded-4, rounded-5, rounded-10, rounded-20, rounded-30, rounded-40, rounded-50
+
+### Background Colors
+
+> [Boostrap Background Classes](https://getbootstrap.com/docs/5.0/utilities/background/) 
+
+Also Support Tailwind CSS Background Classes
+> [Tailwind Color Classes](https://tailwindcss.com/docs/background-color) 
+
+### Drop Shadows
+
+> [Bootstrap Shadow Classes](https://getbootstrap.com/docs/5.0/utilities/shadows/)
+
+### Background Gradient
+
+> [Bootstrap Gradients](https://getbootstrap.com/docs/5.0/utilities/background/#background-gradient)
+
+You can make any background color a gradient simply by adding bg-gradient to your container class names
+
 ## Extended Bootstrap Classes
 
 **Border Radius:** Additional rounded border classes
