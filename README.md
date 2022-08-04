@@ -33,6 +33,10 @@ There is no configuration popup, no JSON configs, just pure Bootstrap CSS
 
 ## Examples
 
+### Just add the classes to the object name
+
+![Example 00!](/assets/Example00.png "Example 00")
+
 ### Container Styling
 
 *Container with rounded borders, drop shadow, and gradient background*
