@@ -1017,3 +1017,79 @@ body {
 .bg-rose-900 {
   background-color: rgb(136 19 55);
 }
+
+.bg-gradient-end {
+  background-image: linear-gradient(90deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0)) !important
+}
+
+.bg-gradient-start {
+  background-image: linear-gradient(270deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0)) !important
+}
+
+.bg-gradient-top {
+  background-image: linear-gradient(0deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0)) !important
+}
+
+.bg-gradient-sm {
+  background-image: linear-gradient(180deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0)) !important
+}
+
+.bg-gradient-end-sm {
+  background-image: linear-gradient(90deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0)) !important
+}
+
+.bg-gradient-start-sm {
+  background-image: linear-gradient(270deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0)) !important
+}
+
+.bg-gradient-top-sm {
+  background-image: linear-gradient(0deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0)) !important
+}
+
+.bg-gradient-vsm {
+  background-image: linear-gradient(180deg, rgba(255, 255, 255, 0.075), rgba(255, 255, 255, 0)) !important
+}
+
+.bg-gradient-end-vsm {
+  background-image: linear-gradient(90deg, rgba(255, 255, 255, 0.075), rgba(255, 255, 255, 0)) !important
+}
+
+.bg-gradient-start-vsm {
+  background-image: linear-gradient(270deg, rgba(255, 255, 255, 0.075), rgba(255, 255, 255, 0)) !important
+}
+
+.bg-gradient-top-vsm {
+  background-image: linear-gradient(0deg, rgba(255, 255, 255, 0.075), rgba(255, 255, 255, 0)) !important
+}
+
+.shadow-top {
+  box-shadow: 0 -1rem 1rem -1rem rgba(0, 0, 0, .15) !important
+}
+
+.shadow-end {
+  box-shadow: 1rem 0 1rem -1rem rgba(0, 0, 0, .15) !important
+}
+
+.shadow-start {
+  box-shadow: -1rem 0 1rem -1rem rgba(0, 0, 0, .15) !important
+}
+
+.shadow-bottom {
+  box-shadow: 0 1rem 1rem -1rem rgba(0, 0, 0, .15) !important
+}
+
+.shadow-top-lg {
+  box-shadow: 0 -3rem 3rem -3rem rgba(0, 0, 0, .15) !important
+}
+
+.shadow-end-lg {
+  box-shadow: 3rem 0 3rem -3rem rgba(0, 0, 0, .15) !important
+}
+
+.shadow-start-lg {
+  box-shadow: -3rem 0 3rem -3rem rgba(0, 0, 0, .15) !important
+}
+
+.shadow-bottom-lg {
+  box-shadow: 0 3rem 3rem -3rem rgba(0, 0, 0, .15) !important
+}
