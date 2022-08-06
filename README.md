@@ -73,9 +73,23 @@ Also Support Tailwind CSS Background Classes
 
 > [Bootstrap Shadow Classes](https://getbootstrap.com/docs/5.0/utilities/shadows/)
 
+Extended drop shadow classes
+> shadow-top, shadow-top-lg, shadow-bottom, shadow-bottom-lg, shadow-start, shadow-start-lg, shadow-end, shadow-end-lg
+
 ### Background Gradient
 
 > [Bootstrap Gradients](https://getbootstrap.com/docs/5.0/utilities/background/#background-gradient)
+
+Extended gradient classes. Allow you to adjust the hue of the gradient and the direction
+
+Directional
+> bg-gradient-end, bg-gradient-start, bg-gradient-top
+
+Small
+> bg-gradient-sm, bg-gradient-end-sm, bg-gradient-start-sm, bg-gradient-top-sm
+
+Very small
+>bg-gradient-vsm, bg-gradient-end-vsm, bg-gradient-start-vsm, bg-gradient-top-vsm    
 
 You can make any background color a gradient simply by adding bg-gradient to your container class names
 
