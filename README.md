@@ -12,14 +12,34 @@ Support for clickthrough and automatic resizing/positioning
 
 Download the .trex file [here](https://github.com/FsuLauncherComp/BootstrapTableau/releases/tag/trex).
 
-1. Float the Extension onto the Dashboard and set it to the size of the dashboard.
-2. Set Extension outer padding to zero
-3. Design your Dashboard by placing your objects (worksheets, text, etc) on top of the Extension
-4. Add inner padding or blank objects for spacing
-5. Change the name of the Object in the item hierarchy
-6. Pattern: Object Name|Bootstrap 5 Classes
+### 1. Drag/drop the Extension onto your Dashboard.
+![Howto1!](/assets/howto1.png "How to one")
 
-## Just use some words
+### 2. Set the Extension to fit the entire dashboard. Set Extension outer padding to zero if needed
+![Howto2!](/assets/howto2.png "How to two")
+
+### 3. Send the Extension to the back so it becomes the bottom layer
+![Howto3!](/assets/howto3.png "How to three")
+
+### 4. Design your Dashboard by drag/dropping your objects (worksheets, text, etc) on top of the Extension
+
+### 5. In the Item hierarchy, rename the objects/containers you want to style. The Patten is (Object Name)|(Bootstrap 5 Classes). IMPORTANT, use the Pipe | delieator between 
+![Howto4!](/assets/howto4.png "How to four")
+
+### 6. Set the inner padding for the objects (Optional)
+Since the Extension draws the divs with the same height/width and position, adding inner padding makes things look nicer
+![Howto5!](/assets/howto5.png "How to five")
+
+### 7. Repeat this process for any objects/containers you want to style
+![Howto6!](/assets/howto6.png "How to six")
+
+### 8. (Tip/Optional) The extension doesn't know "Outer Padding". Use Blank objects to create spacing
+![Howto7!](/assets/howto7.png "How to seven")
+
+### 9. Try different styles! Look through the docs and try different combinations
+![Howto8!](/assets/howto8.png "How to eight")
+
+## Style Patten: Just use some words
 
 The Extension levarages a unique idea: Create a blank html canvas, create objects with the same location and size as the Tableau Objects, style them using Bootstrap. 
 
@@ -53,30 +73,38 @@ There is no configuration popup, no JSON configs, just pure Bootstrap CSS
 
 ## Bootstrap Specific Docs
 
-### Borders
+### Borders 
+For adding various border widths, styles, and colors
+
 > [Boostrap Border Classes](https://getbootstrap.com/docs/5.0/utilities/borders/) 
 
 ### Corner Radius
+Control how rounded your containers' corners are. Specificy which corners to round
+
 > [Boostrap Radius Classes](https://getbootstrap.com/docs/5.0/utilities/borders/#border-radius) 
 
 > Also supports 
 > rounded-4, rounded-5, rounded-10, rounded-20, rounded-30, rounded-40, rounded-50
 
-### Background Colors
-
-> [Boostrap Background Classes](https://getbootstrap.com/docs/5.0/utilities/background/) 
-
-Also Support Tailwind CSS Background Classes
-> [Tailwind Color Classes](https://tailwindcss.com/docs/background-color) 
-
 ### Drop Shadows
+Add drop shadows of different sizes and directions to give your containers depth
 
 > [Bootstrap Shadow Classes](https://getbootstrap.com/docs/5.0/utilities/shadows/)
 
 Extended drop shadow classes
 > shadow-top, shadow-top-lg, shadow-bottom, shadow-bottom-lg, shadow-start, shadow-start-lg, shadow-end, shadow-end-lg
 
+### Background Colors
+Add background colors to your containers. Works in combination with gradients
+
+> [Boostrap Background Classes](https://getbootstrap.com/docs/5.0/utilities/background/) 
+
+Also Support Tailwind CSS Background Classes
+> [Tailwind Color Classes](https://tailwindcss.com/docs/background-color) 
+
+
 ### Background Gradient
+Add gradients with the background colors above. Control the intensity and direction
 
 > [Bootstrap Gradients](https://getbootstrap.com/docs/5.0/utilities/background/#background-gradient)
 
