@@ -18,6 +18,38 @@ const tableauExt = window.tableau.extensions;
         });
     }
 
+    function getMarginFromObjClasses(objClasses){
+        const margin = [0, 0, 0, 0];
+        if (!objClasses) return margin;
+
+        const classNames = objClasses.split(/\s+/)
+        classNames.reverse();
+        const marginClass = classNames.find((cl) => cl.startsWith('margin-'));
+        if (!marginClass) return margin;
+
+        const marginValues = marginClass.split('-').slice(1).map(v => parseInt(v))
+        if (marginValues.length === 1) {
+            const [all] = marginValues
+            return [all, all, all, all]
+        }
+
+        if (marginValues.length === 2) {
+            const [vertical, horizontal] = marginValues
+            return [vertical, horizontal, vertical, horizontal]
+        }
+
+        if (marginValues.length === 3) {
+            const [top, horizontal, bottom] = marginValues
+            return [top, horizontal, bottom, horizontal]
+        }
+
+        if (marginValues.length === 4) {
+            return marginValues
+        }
+
+        return margin;
+    }
+
     async function render(obj) {
         let objNameAndClasses = obj.name.split("|");
         //Parse the Name and Classes from the Object Name
@@ -28,15 +60,19 @@ const tableauExt = window.tableau.extensions;
             objClasses = objNameAndClasses[1];
         }
         //Create the initial object with CSS Props
+        
+        // we need to check for padding classes first, as they must be handled via positioning
+        const margin = getMarginFromObjClasses(objClasses)
+        
         //Here we set the CSS props to match the location of the objects on the Dashboard
         let props = {
             id: `${objId}`,
             css: {
                 'position': 'absolute',
-                'top': `${parseInt(obj.position.y)}px`,
-                'left': `${parseInt(obj.position.x)}px`,
-                'width': `${parseInt(obj.size.width)}px`,
-                'height': `${parseInt(obj.size.height)}px`
+                'top': `${parseInt(obj.position.y) + margin[0]}px`,
+                'left': `${parseInt(obj.position.x) + margin[3]}px`,
+                'width': `${parseInt(obj.size.width) - margin[1] - margin[3]}px`,
+                'height': `${parseInt(obj.size.height) - margin[0] - margin[2]}px`
             }
         }
         let $div = $('<div>', props);

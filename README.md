@@ -143,6 +143,19 @@ You can make any background color a gradient simply by adding bg-gradient to you
 
 > [Tailwind Color Classes](https://tailwindcss.com/docs/background-color) 
 
+**Margin classes:**
+
+In case you use padding in Tableau to position your elements in containers, you can use a margin class in TabCSS. This works similarly to "outer padding" in Tableau, whereby any border and background classes you define will respect this padding.
+
+Add 20px margin all around:
+> margin-20
+
+Add 10px margin vertically and 20px horizontally:
+> margin-10-20
+
+Use different margins on each side (numbers go top-right-bottom-left according to CSS conventions):
+> margin-5-10-15-10
+
 ## Useful Links
 
 [Bootstrap 5 Documentation](https://getbootstrap.com/) Here you can find all the Bootstrap 5 Classes to style your containers
