@@ -1,11 +1,11 @@
-let $ = window.$;
+const body = window.document.body;
 const tableauExt = window.tableau.extensions;
 
 //Wrap everything into an anonymous function
 (function () {
     async function init() {
         //clean up any divs from the last initialization
-        $('body').empty();
+        body.innerHTML = '';
         tableau.extensions.setClickThroughAsync(true).then(() => {
             let dashboard = tableauExt.dashboardContent.dashboard;
             //Loop through the Objects on the Dashboard and render the HTML Objects
@@ -51,45 +51,39 @@ const tableauExt = window.tableau.extensions;
     }
 
     async function render(obj) {
+        const div = document.createElement('div');
         let objNameAndClasses = obj.name.split("|");
+        let margin = getMarginFromObjClasses();
         //Parse the Name and Classes from the Object Name
-        let objId = objNameAndClasses[0];
-        let objClasses;
+        div.id = `${objNameAndClasses[0]}`;
         //Check if there are classes on the object
         if (objNameAndClasses.length > 1) {
             objClasses = objNameAndClasses[1];
+            div.classList.add(objClasses);
+            margin = getMarginFromObjClasses(objClasses);
         }
-        //Create the initial object with CSS Props
+        // we need to check for padding classes first, as they must be handled via positioning    
+        div.style.cssText = `position:absolute;top:${parseInt(obj.position.y) + margin[0]}px;left:${parseInt(obj.position.x) + margin[3]}px;width:${parseInt(obj.size.width) - margin[1] - margin[3]}px;height:${parseInt(obj.size.height) - margin[0] - margin[2]}px;`
         
-        // we need to check for padding classes first, as they must be handled via positioning
-        const margin = getMarginFromObjClasses(objClasses)
-        
-        //Here we set the CSS props to match the location of the objects on the Dashboard
-        let props = {
-            id: `${objId}`,
-            css: {
-                'position': 'absolute',
-                'top': `${parseInt(obj.position.y) + margin[0]}px`,
-                'left': `${parseInt(obj.position.x) + margin[3]}px`,
-                'width': `${parseInt(obj.size.width) - margin[1] - margin[3]}px`,
-                'height': `${parseInt(obj.size.height) - margin[0] - margin[2]}px`
-            }
-        }
-        let $div = $('<div>', props);
-        //Add the class to the HTML Body
-        $div.addClass(objClasses);
-        $('body').append($div);
+        body.appendChild(div);
+    }
+    
+    function ready(fn) {
+      if (document.readyState !== 'loading'){
+        fn();
+        return;
+      } 
+      document.addEventListener('DOMContentLoaded', fn);
     }
 
-    $(document).ready(() => {
-        tableauExt.initializeAsync().then(() => {
-            init();
-            //Register an event handler for Dashboard Object resize
-            //Supports automatic sized dashboards and reloads
-            let resizeEventHandler = tableauExt.dashboardContent.dashboard.addEventListener(tableau.TableauEventType.DashboardLayoutChanged, init);
-        }, (err) => {
-            console.log("Broken")
-        });
+    ready(function () {
+      tableauExt.initializeAsync().then(() => {
+        init();
+        //Register an event handler for Dashboard Object resize
+        //Supports automatic sized dashboards and reloads
+        let resizeEventHandler = tableauExt.dashboardContent.dashboard.addEventListener(tableau.TableauEventType.DashboardLayoutChanged, init);
+      }, (err) => {
+        console.log("Broken")
+      });
     });
-
 })();
