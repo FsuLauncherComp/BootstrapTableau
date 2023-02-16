@@ -18,16 +18,17 @@ const tableauExt = window.tableau.extensions;
         });
     }
 
-    function getMarginFromObjClasses(objClasses){
+    function getMarginFromClassNames(classNames){
         const margin = [0, 0, 0, 0];
-        if (!objClasses) return margin;
+        if (!classNames) return margin;
 
-        const classNames = objClasses.split(/\s+/)
         classNames.reverse();
+
         const marginClass = classNames.find((cl) => cl.startsWith('margin-'));
         if (!marginClass) return margin;
 
-        const marginValues = marginClass.split('-').slice(1).map(v => parseInt(v))
+        const marginValues = marginClass.split('-').slice(1).map(v => parseInt(v));
+
         if (marginValues.length === 1) {
             const [all] = marginValues
             return [all, all, all, all]
@@ -53,14 +54,15 @@ const tableauExt = window.tableau.extensions;
     async function render(obj) {
         const div = document.createElement('div');
         let objNameAndClasses = obj.name.split("|");
-        let margin = getMarginFromObjClasses();
+        let margin = getMarginFromClassNames();
         //Parse the Name and Classes from the Object Name
         div.id = `${objNameAndClasses[0]}`;
         //Check if there are classes on the object
         if (objNameAndClasses.length > 1) {
-            objClasses = objNameAndClasses[1];
-            div.classList.add(objClasses);
-            margin = getMarginFromObjClasses(objClasses);
+            const classNames = objNameAndClasses[1].split(/\s+/);
+            div.classList.add(...classNames);
+            
+            margin = getMarginFromClassNames(classNames);
         }
         // we need to check for padding classes first, as they must be handled via positioning    
         div.style.cssText = `position:absolute;top:${parseInt(obj.position.y) + margin[0]}px;left:${parseInt(obj.position.x) + margin[3]}px;width:${parseInt(obj.size.width) - margin[1] - margin[3]}px;height:${parseInt(obj.size.height) - margin[0] - margin[2]}px;`
